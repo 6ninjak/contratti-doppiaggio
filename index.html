@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Contratti</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Icons+Round'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <ul class="navbar-items flexbox-col">
+            <li class="navbar-logo flexbox-left">
+                <a class="navbar-item-inner flexbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="navbar-item-inner-icon-wrapper flexbox">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 2h18a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm4 2v5h10V4H7zm0 7v7h10v-7H7z"></path>
+                        <path d="M5 12h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1zm2 2v4h10v-4H7z"></path>
+                        <path d="M12 15h2v2h-2v-2z"></path>
+                        <path d="M7 6h10v2H7V6z"></path>
+                    </svg>
+                    <span class="link-text">Gestione Contratti</span>
+                </a>
+            </li>
+            <li class="navbar-item flexbox-left">
+                <a href="#" class="navbar-item-inner flexbox-left" onclick="mostraSezione('home')">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+            <li class="navbar-item flexbox-left">
+                <a href="#" class="navbar-item-inner flexbox-left" onclick="mostraSezione('societa')">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="business-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Società</span>
+                </a>
+            </li>
+            <li class="navbar-item flexbox-left">
+                <a href="#" class="navbar-item-inner flexbox-left" onclick="mostraSezione('inserimento')">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Contratti</span>
+                </a>
+            </li>
+            <li class="navbar-item flexbox-left">
+                <a href="#" class="navbar-item-inner flexbox-left" onclick="mostraSezione('profilo')">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Profilo</span>
+                </a>
+            </li>
+            <!-- impostazioni -->
+            <li class="navbar-item flexbox-left">
+                <a href="#" class="navbar-item-inner flexbox-left" onclick="mostraSezione('impostazioni')">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Impostazioni</span>
+                </a>
+        </ul>
+    </nav>
+
+    <main id="main" class="flexbox-col-start-center">
+        <section id="home" class="sezione">
+            <h2>Riepilogo Annuale</h2>
+            <!-- Aggiungi qui il riepilogo degli inserimenti per mese -->
+        </section>
+
+        <section id="societa" class="sezione hidden">
+            <h2>Elenco Società</h2>
+            <!-- Aggiungi qui l'elenco delle società e le loro informazioni -->
+        </section>
+
+        <section id="inserimento" class="sezione hidden">
+            <h2>Inserimento Contratti</h2>
+            <!-- Aggiungi qui il modulo per l'inserimento dei contratti -->
+        </section>
+
+        <section id="profilo" class="sezione hidden">
+            <h2>Modifica Profilo</h2>
+            <!-- Aggiungi qui il modulo per la modifica del profilo -->
+        </section>
+        <section id="impostazioni" class="sezione hidden">
+            <h2>Impostazioni</h2>
+            <!-- Aggiungi qui il modulo per le impostazioni -->
+    </main>
+
+    <!-- partial -->
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
+    <script src="script.js"></script>
+</body>
+</html>
