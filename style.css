@@ -34,6 +34,10 @@ Areal Alien ❥ 雷克斯
   --font-main: "Poppins";
 }
 
+/*
+MY STYLES
+*/
+
 .hidden {
   display: none;
   opacity: 0;
@@ -46,6 +50,10 @@ Areal Alien ❥ 雷克斯
   display: block;
   transition: opacity 0.2s linear, height 2s step-start;
 }
+
+/*
+END MY STYLES
+*/
 
 /* ===========
   Variabels
@@ -310,6 +318,8 @@ select {
 .navbar-logo > .navbar-item-inner > svg {
   height: 2em;
   fill: hsl(var(--white));
+  stroke: hsl(var(--primary));
+  stroke-width: 2;
 }
 /* Navbar Items */
 .navbar-item {
