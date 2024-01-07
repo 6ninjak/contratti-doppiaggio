@@ -11,17 +11,18 @@ Areal Alien ❥ 雷克斯
 -*-~*~-*-*-~*~-*-*-~*~* |
 - */
 :root {
-  --primary: 237, 94%, 81%;
-  --background: 266, 16%, 92%;
-  --background-secondary: 256, 12%, 12%;
-  --background-secondary-dark: 256, 10%, 10%;
-  --background-secondary-light: 257, 11%, 16%;
-  --text-primary: 0, 0%, 0%;
+  --primary: hsl(237, 94%, 81%);
+  --background: hsl(266, 16%, 92%);
+  --table: hsl(0, 0%, 100%);
+  --background-secondary: hsl(256, 12%, 12%);
+  --background-secondary-dark: hsl(256, 10%, 10%);
+  --background-secondary-light: hsl(257, 11%, 16%);
+  --text-primary: hsl(0, 0%, 0%);
   /* Colors */
-  --black: 0, 0%, 0%;
-  --white: 0, 0%, 100%;
-  --quite-gray: 0, 0%, 50%;
-  --grooble: 10, 28%, 93%;
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --quite-gray: hsl(0, 0%, 50%);
+  --grooble: hsl(10, 28%, 93%);
   /* Sizes */
   --heading-large: 5.6rem;
   --heading-medium: 3.6rem;
@@ -51,6 +52,62 @@ MY STYLES
   transition: opacity 0.2s linear, height 2s step-start;
 }
 
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: separate; /* Change to separate */
+  border-spacing: 0; /* Add border-spacing */
+  margin: 1rem 0;
+  border-radius: 10px; /* Add border-radius */
+  overflow: hidden; /* Add overflow */
+}
+
+.table th, .table td {
+  padding: 1rem;
+  border: 1px solid var(--quite-gray); /* Change to your color variable */
+  text-align: left;
+}
+
+.table th {
+  background-color: var(--background-secondary); /* Change to your color variable */
+  color: var(--primary); /* Change to your color variable */
+  font-size: var(--heading-small);
+}
+
+.table td {
+  font-size: var(--paragraph);
+}
+
+/* Add these styles to round the first and last cells of each row */
+.table tr:first-child th:first-child,
+.table tr:first-child td:first-child {
+  border-top-left-radius: 10px;
+}
+
+.table tr:first-child th:last-child,
+.table tr:first-child td:last-child {
+  border-top-right-radius: 10px;
+}
+
+.table tr:last-child th:first-child,
+.table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.table tr:last-child th:last-child,
+.table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.table tr:nth-child(odd) {
+  background-color: var(--table);
+}
+
+
+.table tr:nth-child(even) {
+  background-color: hsl(from var(--table) h s l / 50%);
+}
+
 /*
 END MY STYLES
 */
@@ -69,9 +126,9 @@ END MY STYLES
 html, body {
   margin: 0;
   width: 100%;
-  color: hsl(var(--text-primary));
+  color: var(--text-primary);
   font-family: var(--font-main);
-  background-color: hsl(var(--background));
+  background-color: var(--background);
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -118,12 +175,12 @@ p {
 }
 /* Links */
 a {
-  color: hsla(var(--primary), 1);
+  color: hsl(from var(--primary) h s l / 1);
   font-size: var(--paragraph);
   text-decoration: underline;
 }
 a:visited {
-  color: hsla(var(--primary), .5);
+  color: hsl(from var(--primary) h s l / .5);
 }
 
 /* =========
@@ -132,16 +189,16 @@ a:visited {
 
 button {
   padding: .8em 1.2em;
-  border: 1px solid hsl(var(--black));
-  background-color: hsl(var(--background));
+  border: 1px solid var(--black);
+  background-color: var(--background);
   font-size: var(--paragraph);
   cursor: pointer;
   outline: none;
 }
 button:focus {
   box-shadow:
-          0 0 0 2px hsl(var(--black)),
-          0 0 0 3px hsl(var(--white));
+          0 0 0 2px var(--black),
+          0 0 0 3px var(--white);
   border: 1px solid transparent;
 }
 
@@ -168,16 +225,16 @@ fieldset {
 input {
   padding: .8em 1.2em;
   font-size: var(--paragraph);
-  background-color: hsl(var(--grooble));
-  border: 2px solid hsl(var(--grooble));
+  background-color: var(--grooble);
+  border: 2px solid var(--grooble);
   outline: none;
 }
 textarea {
   padding: .8em 1.2em;
   font-size: var(--paragraph);
   font-family: var(--font-main);
-  background-color: hsl(var(--grooble));
-  border: 2px solid hsl(var(--grooble));
+  background-color: var(--grooble);
+  border: 2px solid var(--grooble);
   outline: none;
 }
 input, textarea {
@@ -185,13 +242,13 @@ input, textarea {
 }
 input:hover, input:focus, textarea:hover, textarea:focus {
   box-shadow:
-          0 0 0 2px hsl(var(--black)),
-          0 0 0 3px hsl(var(--white));
+          0 0 0 2px var(--black),
+          0 0 0 3px var(--white);
   border: 2px solid transparent;
 }
 select {
   padding: .8em 1.2em;
-  border: 1px solid hsl(var(--black));
+  border: 1px solid var(--black);
   font-size: var(--paragraph);
   outline: none;
 }
@@ -279,7 +336,7 @@ select {
   width: 5em;
   height: 100vh;
   position: fixed;
-  background-color: hsl(var(--background-secondary));
+  background-color: var(--background-secondary);
   transition: width .35s cubic-bezier(var(--transition-main), 1);
   overflow-y: auto;
   overflow-x: hidden;
@@ -288,14 +345,14 @@ select {
   width: 16em;
 }
 #navbar::-webkit-scrollbar-track {
-  background-color: hsl(var(--background-secondary));
+  background-color: var(--background-secondary);
 }
 #navbar::-webkit-scrollbar {
   width: 8px;
-  background-color: hsl(var(--background-secondary));
+  background-color: var(--background-secondary);
 }
 #navbar::-webkit-scrollbar-thumb {
-  background-color: hsl(var(--primary));
+  background-color: var(--primary);
 }
 .navbar-items {
   margin: 0;
@@ -307,7 +364,7 @@ select {
   margin: 0 0 2em 0;
   width: 100%;
   height: 5em;
-  background: hsl(var(--background-secondary-dark));
+  background: var(--background-secondary-dark);
 }
 .navbar-logo > .navbar-item-inner {
   width: calc(5rem - 8px);
@@ -317,8 +374,8 @@ select {
 }
 .navbar-logo > .navbar-item-inner > svg {
   height: 2em;
-  fill: hsl(var(--white));
-  stroke: hsl(var(--primary));
+  fill: var(--white);
+  stroke: var(--primary);
   stroke-width: 2;
 }
 /* Navbar Items */
@@ -331,15 +388,15 @@ select {
   padding: 1em 0;
   width: 100%;
   position: relative;
-  color: hsl(var(--quite-gray));
+  color: var(--quite-gray);
   border-radius: .25em;
   text-decoration: none;
   transition: all .2s cubic-bezier(var(--transition-main), 1);
 }
 .navbar-item-inner:hover {
-  color: hsl(var(--white));
-  background: hsl(var(--background-secondary-light));
-  box-shadow: 0 17px 30px -10px hsla(var(--black), .25);
+  color: var(--white);
+  background: var(--background-secondary-light);
+  box-shadow: 0 17px 30px -10px hsl(from var(--black) h s l / .25);
 }
 .navbar-item-inner-icon-wrapper {
   width: calc(5rem - 1em - 8px);
@@ -386,19 +443,19 @@ select {
 
 /* Selection */
 ::selection {
-  color: hsl(var(--white));
-  background: hsla(var(--primary), .33);
+  color: var(--white);
+  background: hsl(from var(--primary) h s l / .33);
 }
 /* Scrollbar */
 ::-webkit-scrollbar-track {
-  background-color: hsl(var(--background));
+  background-color: var(--background);
 }
 ::-webkit-scrollbar {
   width: 8px;
-  background-color: hsl(var(--background));
+  background-color: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(var(--primary));
+  background-color: var(--primary);
 }
 
 /* ===============
