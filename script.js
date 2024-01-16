@@ -39,6 +39,7 @@ function loadCSVOnTable(filename, table) {
       for (var col = 0; col < headerRowColData.length; col++) {
         // Insert a cell at the end of the row
         var headerCell = document.createElement("th");
+        headerCell.setAttribute("scope", "col");
         headerCell.innerHTML = headerRowColData[col];
         newRow.appendChild(headerCell);
       }
