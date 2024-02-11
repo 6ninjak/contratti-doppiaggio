@@ -94,6 +94,9 @@ class Compensi {
     this.load();
     
   }
+  /**
+   * Loads data from a JSON file and renders it.
+   */
   load() {
     fetch("./data/" + this.filename)
       .then((response) => response.json())
