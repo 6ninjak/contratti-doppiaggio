@@ -84,3 +84,23 @@ function saveCSV(data, filename) {
   a.click();
   document.body.removeChild(a);
 }
+
+
+class Compensi {
+  constructor(filename) {
+    // load JSON file from path filename
+    this.filename = filename;
+    this.data = null;
+    this.load();
+    
+  }
+  load() {
+    fetch("./data/" + this.filename)
+      .then((response) => response.json())
+      .then((data) => {
+        this.data = data;
+        this.render();
+      });
+  }
+
+}

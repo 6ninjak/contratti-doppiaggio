@@ -1,0 +1,159 @@
+{
+    "A": {
+        "descrizione": "Opere uniche: film stranieri, italiani e d'animazione, di qualunque metraggio; I trailer relativi a tutte le tipologie elencate.",
+        "max_righe": 130,
+        "doppio_gettone": 71,
+        "compensi": {
+            "direttori": {
+                "2024": 205.0,
+                "2025": 230.0
+            },
+            "assistenti": {
+                "2024": {
+                    "senza_regista": 118.0,
+                    "con_regista": 141.0,
+                    "preparazione": 118.0
+                },
+                "2025": {
+                    "senza_regista": 130.0,
+                    "con_regista": 169.0,
+                    "preparazione": 130.0
+                }
+            },
+            "doppiatori": {
+                "2024": {
+                    "gettone": 79.0,
+                    "riga": 2.42
+                },
+                "2025": {
+                    "gettone": 84.0,
+                    "riga": 2.50
+                }
+            },
+            "adattatori": {
+                "2024": {
+                    "min": null
+                },
+                "2025": {
+                    "min": null
+                }
+            }
+        }
+    },
+    "B": {
+        "descrizione": "Miniserie; telefilm e serie anche d'animazione: anime, sit-com e relativi trailer.",
+        "max_righe": 160,
+        "doppio_gettone": 97,
+        "compensi": {
+            "direttori": {
+                "2024": 205.0,
+                "2025": 230.0
+            },
+            "assistenti": {
+                "2024": {
+                    "senza_regista": 118.0,
+                    "con_regista": 141.0,
+                    "preparazione": 118.0
+                },
+                "2025": {
+                    "senza_regista": 130.0,
+                    "con_regista": 169.0,
+                    "preparazione": 130.0
+                }
+            },
+            "doppiatori": {
+                "2024": {
+                    "gettone": 79.0,
+                    "riga": 2.18
+                },
+                "2025": {
+                    "gettone": 84.0,
+                    "riga": 2.30
+                }
+            },
+            "adattatori": {
+                "2024": {
+                    "min": null
+                },
+                "2025": {
+                    "min": null
+                }
+            }
+        }
+    },
+    "C": {
+        "descrizione": "Soap-opera; telenovele; documentari in sinc; talent show; docudrama; reality; docureality in sinc.",
+        "max_righe": 200,
+        "doppio_gettone": 121,
+        "compensi": {
+            "direttori": {
+                "2024": 205.0,
+                "2025": 230.0
+            },
+            "assistenti": {
+                "2024": {
+                    "senza_regista": 118.0,
+                    "con_regista": 141.0,
+                    "preparazione": 118.0
+                },
+                "2025": {
+                    "senza_regista": 130.0,
+                    "con_regista": 169.0,
+                    "preparazione": 130.0
+                }
+            },
+            "doppiatori": {
+                "2024": {
+                    "gettone": 79.0,
+                    "riga": 1.67
+                },
+                "2025": {
+                    "gettone": 84.0,
+                    "riga": 1.75
+                }
+            },
+            "adattatori": {
+                "2024": {
+                    "min": null
+                },
+                "2025": {
+                    "min": null
+                }
+            }
+        }
+    },
+    "D": {
+        "descrizione": "Documentari e Reality NON IN SINC",
+        "max_righe": {
+            "over": 300,
+            "speaker": 400
+        },
+        "doppio_gettone": null,
+        "compensi": {
+            "direttori": {
+                "2024": 156.0,
+                "2025": 165.0
+            },
+            "doppiatori": {
+                "2024": {
+                    "gettone": 100.0,
+                    "soglia_gettone": 30,
+                    "riga": 0.70
+                },
+                "2025": {
+                    "gettone": 100.0,
+                    "soglia_gettone": 30,
+                    "riga": 0.75
+                }
+            },
+            "adattatori": {
+                "2024": {
+                    "min": null
+                },
+                "2025": {
+                    "min": null
+                }
+            }
+        }
+    }
+}
